@@ -140,6 +140,16 @@
   font-size: smaller;
 align-items:center;
 }
+
+/* zoom transition  */
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 </style>
 </head>
 
@@ -155,17 +165,26 @@ align-items:center;
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1">
-          <li class="nav-item">
+          <li class="nav-item pt-2">
             <div class="input-group border rounded-2 border-dark ">
-              <div class="form-outline">
+
+              <input type="text" placeholder="Where are you going?" id="search-input"  class="form-control">
+			<div class="input-group-append">
+        <button class="btn "  style="color: white; background-color: #ff018b;">
+          <i class="fa fa-search">
+
+          </i></button></div>
 
 
-                <input placeholder="Where are you going?" id="search-input" type="search" id="form1" class="border rounded-2 form-control shadow-none p-3" />
+              <!-- <div class="form-outline">
+
+
+                <input placeholder="Where are you going?" id="search-input" type="search" id="form1" class="border rounded-2 form-control shadow-none" />
                 
               </div>
               <button id="search-button" type="button" class="border rounded-2 border border-0 bg-white mx-5">
                 <i class="bi bi-search"></i>
-              </button>
+              </button> -->
             </div>
           </li>
           <!-- navbar-text: to center vertically -->
@@ -205,8 +224,8 @@ align-items:center;
         <img max-width: 100% height: auto src="./images/home_pinkpaint_hero.jpg" class="img-fluid" alt="" />
       </div>
       <div class="col-lg-6 col-md-12 col-sm-12">
-        <p class="display-2"><b>Let’s ride</b></p>
-        <button type="button" class="btn btn-primary rounded-5 btnColor">Apply to drive</button>
+        <p class="display-2 fw-normal"><b>Let’s ride</b></p>
+        <button type="button" class="btn btn-primary rounded-5 btnColor mx-2">Apply to drive</button>
         <button type="button" class="btn btn-light border border-2 rounded-5 ">Sign up to ride</button>
 
 
@@ -221,6 +240,11 @@ align-items:center;
     <div class="container">
       <div class="row align-items-center justify-content-between">
         
+
+        <div class="col-md-12 d-lg-none  text-center pt-3">
+          <img width="50%"   src="./images/home_pinkpaint_driver.jpg" class="img-fluid mx-auto" alt="">
+        </div>
+
         <div class="col-lg-6 col-md-12 p-lg-5 p-sm-5">
           <h5>DRIVE WITH LYFT</h5>
           <h1>Set your own hours. Earn on your own terms.</h1>
@@ -237,31 +261,33 @@ align-items:center;
           </ul>
       
 
-          <button type="button" class="btn btn-primary rounded-5 btnColor">Apply to drive</button>
+          <button type="button" class="btn btn-primary rounded-5 btnColor mx-2">Apply to drive</button>
           <a href="#" class="btn btn-light btn-outline-primary rounded-5 ">How driver pay works <i class="fa fa-chevron-right"></i></a>
         </div>
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-6 col-md-12 d-none d-lg-block">
           <img width="60%" src="./images/home_pinkpaint_driver.jpg" class="img-fluid" alt="">
         </div>
+
+
 
         <div class="row d-flex justify-content-center g-4">
           <div class="col-lg-4">
               <div class="d-flex justify-content-center pt-2 pb-5">
-              <img class="tm-people" src="./images/harold_driver.png" alt=""></div>
+              <img class="tm-people zoom" src="./images/harold_driver.png" alt=""></div>
               <div class="color-grey-3 text-center pb-5">“As a student, it’s hard to complete my class work around a schedule. I started driving more with Lyft and realized it was the perfect opportunity to make money and work on my own time! Driving with Lyft gives me freedom in my schedule to focus on school, which is my main priority.”</div>
               <div class="link-name d-flex justify-content-center">- Harold</div>
               <div class="link-position d-flex justify-content-center fst-italic">Driving with Lyft since 2020</div>
           </div>
           <div class="col-lg-4">
             <div class="d-flex justify-content-center pt-2 pb-5">
-            <img class="tm-people" src="./images/christine_driver.png" alt=""></div>
+            <img class="tm-people zoom" src="./images/christine_driver.png" alt=""></div>
             <div class="color-grey-3 text-center pb-5">“I'm a disabled Marine Corps veteran, and because of my disability, I'm no longer able to work in a structured environment. The few hours a week that I drive connects me to my community and gives me extra money to help make ends meet.”</div>
             <div class="link-name d-flex justify-content-center">- Christine</div>
             <div class="link-position d-flex justify-content-center fst-italic">Driving with Lyft since 2020</div>
         </div>
         <div class="col-lg-4">
           <div class="d-flex justify-content-center pt-2 pb-5">
-          <img class="tm-people" src="./images/timothy_driver.png" alt=""></div>
+          <img class="tm-people zoom" src="./images/timothy_driver.png" alt=""></div>
           <div class="color-grey-3 text-center pb-5">“Driving with Lyft is the perfect way to make money and be there for my family’s needs. I love providing a way to get my passengers from point A to B. Independence is key for me, and I enjoy meeting new people while driving!”</div>
           <div class="link-name d-flex justify-content-center">- Timothy</div>
           <div class="link-position d-flex justify-content-center fst-italic">Driving with Lyft since 2020</div>
@@ -298,10 +324,10 @@ in just a few quick taps -->
             </ul>
         
   
-            <button type="button" class="btn btn-primary btn-rounded rounded-5 btnColor">Get a ride</button>
-            <a href="#" class="btn btn-light rounded-5 btn-outline-primary">Learn more about riding with Lyft <i class="fa fa-chevron-right"></i> </a>
+            <button type="button" class="btn btn-primary btn-rounded rounded-5 btnColor m-1">Get a ride</button>
+            <a href="#" class="btn btn-light rounded-5 btn-outline-primary m-1">Learn more about riding with Lyft <i class="fa fa-chevron-right"></i> </a>
           </div>
-          <div class="col-lg-6 col-md-12 pt-sm-5">
+          <div class="col-lg-6 col-md-12 pt-sm-5 m-1">
             <img width="75%" src="./images/rider_stylized_text_image.png" class="img-fluid" alt="" />
           </div>
         </div>
@@ -381,7 +407,7 @@ in just a few quick taps -->
                   <div class="card ">
                     <div class="card-header h5">Lyft</div>
                       <div class="card-img py-5">
-                          <img style="width: auto; height: 100px;" src="./images/1.svg" class="img-fluid   pb-4 py-0 mx-auto">
+                          <img style="width: auto; height: 100px;" src="./images/1.svg" class="img-fluid   pb-4 py-0 mx-auto zoom">
                       </div>
                       <!-- <div class="card-img-overlay">Slide 1</div> -->
                       <div class="card-body">
@@ -397,7 +423,7 @@ in just a few quick taps -->
                 <div class="card ">
                   <div class="card-header h5">Scooters</div>
                     <div class="card-img py-5">
-                        <img style="width: auto; height: 100px;" src="./images/22.png" class="img-fluid   pb-4 py-0 mx-auto">
+                        <img style="width: auto; height: 100px;" src="./images/22.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
                     </div>
                     <div class="card-body">
                       <p class="card-text mb-0"><i class="bi bi-lightning-fill"></i> Efficient</p>
@@ -409,9 +435,9 @@ in just a few quick taps -->
         <div class="carousel-item">
           <div class="col-md-6 col-sm-12 col-lg-3 mx-1">
               <div class="card ">
-                <div class="card-header h5">Priority Pickup</div>
+                <div class="card-header h5 ">Priority Pickup</div>
                   <div class="card-img py-5">
-                      <img style="width: auto; height: 100px;" src="./images/33.svg" class="img-fluid   pb-4 py-0 mx-auto">
+                      <img style="width: auto; height: 100px;" src="./images/33.svg" class="img-fluid   pb-4 py-0 mx-auto zoom">
                   </div>
                   <div class="card-body">
                     <p class="card-text mb-0"><i class="bi bi-lightning-fill"></i> Efficient</p>
@@ -425,7 +451,7 @@ in just a few quick taps -->
             <div class="card ">
               <div class="card-header h5">Preferred</div>
                 <div class="card-img py-5">
-                    <img style="width: auto; height: 100px;" src="./images/44.svg" class="img-fluid   pb-4 py-0 mx-auto">
+                    <img style="width: auto; height: 100px;" src="./images/44.svg" class="img-fluid   pb-4 py-0 mx-auto zoom">
                 </div>
                 <div class="card-body">
                   <p class="card-text mb-0"><i class="fa fa-suitcase"></i> Roomier</p>
@@ -439,7 +465,7 @@ in just a few quick taps -->
           <div class="card ">
             <div class="card-header h5">Rentals</div>
               <div class="card-img py-5">
-                  <img style="width: auto; height: 100px;" src="./images/55.png" class="img-fluid   pb-4 py-0 mx-auto">
+                  <img style="width: auto; height: 100px;" src="./images/55.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
               </div>
               <div class="card-body">
                 <p class="card-text mb-0"><i class="bi bi-lightning-fill"></i> Efficient</p>
@@ -453,7 +479,7 @@ in just a few quick taps -->
         <div class="card ">
           <div class="card-header h5">Lyft XL</div>
             <div class="card-img py-5">
-                <img style="width: auto; height: 100px;" src="./images/66.png" class="img-fluid   pb-4 py-0 mx-auto">
+                <img style="width: auto; height: 100px;" src="./images/66.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
             </div>
             <div class="card-body">
               <p class="card-text mb-0"><i class="fa fa-users"></i> Extra Seats</p>
@@ -467,7 +493,7 @@ in just a few quick taps -->
       <div class="card ">
         <div class="card-header h5">Lyft Lux</div>
           <div class="card-img py-5">
-              <img style="width: auto; height: 100px;" src="./images/77.png" class="img-fluid   pb-4 py-0 mx-auto">
+              <img style="width: auto; height: 100px;" src="./images/77.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
           </div>
           <div class="card-body">
             <p class="card-text mb-0"><i class="bi bi-lightning-fill"></i> Efficient</p>
@@ -481,7 +507,7 @@ in just a few quick taps -->
       <div class="card ">
         <div class="card-header h5">Transit</div>
           <div class="card-img py-5">
-              <img style="width: auto; height: 100px;" src="./images/88.png" class="img-fluid   pb-4 py-0 mx-auto">
+              <img style="width: auto; height: 100px;" src="./images/88.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
           </div>
           <div class="card-body">
             <p class="card-text mb-0"><i class="fa fa-dollar"></i> Budget-friendly</p>
@@ -513,20 +539,20 @@ in just a few quick taps -->
       <div class="container-fluid  ">
         <div class="row align-items-center justify-content-between">
           <div class="col-lg-3 col-md-3 col-sm-12">
-            <p class="h3 px-5 pt-5">Ready to roll?</p>
-            <p class="h3 px-5">Get an estimate.</p>
+            <p class="h3 px-5 pt-5 ">Ready to roll?</p>
+            <p class="h3 px-5 pb-5">Get an estimate.</p>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 p-sm-3">
+          <div class="col-lg-3 col-md-3 col-sm-12 p-sm-3 p-1">
             <input class="form-control"
              type="text" placeholder="Enter pick-up location">
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 p-sm-3">
+          <div class="col-lg-3 col-md-3 col-sm-12 p-sm-3 p-1">
             <input class="form-control"
              type="text" placeholder="Enter drop-off location">
           </div>
 
-          <div class="col-lg-3 col-md-3 col-sm-12">
-            <button type="button" class="btn btn-light btn-lg btn-">Get estimate</button>
+          <div class="col-lg-3 col-md-3 col-sm-12 p-2">
+            <button type="button" class="btn btn-light  rounded-5 ">Get estimate</button>
           </div>
 
         </div>
@@ -575,7 +601,7 @@ in just a few quick taps -->
 
         </b></p>
 
-         <a href="#" class="btn btn-light">Learn about our Lyft Up programs <i class="fa fa-chevron-right"></i></a>    
+         <a href="#" class="btn btn-light rounded-5">Learn about our Lyft Up programs <i class="fa fa-chevron-right"></i></a>    
 
       </div>
     </div>
@@ -610,22 +636,22 @@ in just a few quick taps -->
     </div>
 
         <div class="col-lg-2 col-md-12 text-center">
-          <img src="./images/slack.svg" class="img-fluid"/>    
+          <img src="./images/slack.svg" class="img-fluid zoom"/>    
         </div>
         <div class="col-lg-2 col-md-12">
-          <img src="./images/airbnb.svg" class="img-fluid"/>    
+          <img src="./images/airbnb.svg" class="img-fluid zoom"/>    
         </div>
         <div class="col-lg-2 col-md-12">
-          <img src="./images/delta.svg" class="img-fluid"/>    
+          <img src="./images/delta.svg" class="img-fluid zoom"/>    
         </div>
         <div class="col-lg-2 col-md-12">
-          <img src="./images/ascension.svg" class="img-fluid"/>    
+          <img src="./images/ascension.svg" class="img-fluid zoom"/>    
         </div>
         <div class="col-lg-2 col-md-12">
-          <img src="./images/modivcare.svg" class="img-fluid"/>    
+          <img src="./images/modivcare.svg" class="img-fluid zoom"/>    
         </div>
         <div class="col-lg-2 col-md-12">
-          <img src="./images/salesforce.svg" class="img-fluid"/>    
+          <img src="./images/salesforce.svg" class="img-fluid zoom"/>    
         </div>
         </div>
 </section>
