@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lyft Clone</title>
+  <link rel="icon" type="image/x-icon" href="/images/lyft-logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
   <!-- <script src="./main.js"></script> -->
@@ -126,6 +127,10 @@
   height: 200px;
   
 }
+.card{
+  width: 300px;
+
+}
 .buisLogo{
   width:130px;
   height: 70px;
@@ -163,10 +168,10 @@ align-items:center;
 
 <body>
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg bg-light border-bottom border-opacity-50 ">
+  <nav class="navbar navbar-expand-xl bg-light border-bottom border-opacity-50 ">
     <div class="container">
       <a class="navbar-brand" href="#"><img width="25%" src="./images/lyft-logo.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"  >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -226,13 +231,13 @@ align-items:center;
 <section id="learn" class="p-5 white">
   <div class="container">
     <div class="row align-items-center justify-content-between">
-      <div class="col-lg-6 col-md-12 col-sm-12 ">
+      <div class="col-lg-6 col-md-12">
         <img max-width: 100% height: auto src="./images/home_pinkpaint_hero.jpg" class="img-fluid" alt="" />
       </div>
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <p class="display-2 fw-normal"><b>Let’s ride</b></p>
-        <button type="button" class="btn btn-primary rounded-5 btnColor mx-2">Apply to drive</button>
-        <button type="button" class="btn btn-light border border-2 rounded-5 ">Sign up to ride</button>
+      <div class="col-lg-6 col-md-12 text-center">
+        <p class="display-2 fw-normal my-4"><b>Let’s ride</b></p>
+        <button type="button" class="btn btn-primary rounded-5 btnColor my-3  ">Apply to drive</button>
+        <button type="button" class="btn btn-light border border-2 rounded-5  ">Sign up to ride</button>
 
 
       </div>
@@ -248,11 +253,11 @@ align-items:center;
         
 
         <div class="col-md-12 d-lg-none  text-center pt-3">
-          <img width="50%"   src="./images/home_pinkpaint_driver.jpg" class="img-fluid mx-auto" alt="">
+          <img width="100%"   src="./images/home_pinkpaint_driver.jpg" class="img-fluid mx-auto" alt="">
         </div>
 
         <div class="col-lg-6 col-md-12 p-lg-5 p-sm-5">
-          <h5>DRIVE WITH LYFT</h5>
+          <h5 class="my-3">DRIVE WITH LYFT</h5>
           <h1>Set your own hours. Earn on your own terms.</h1>
 
           <ul class="list-unstyled mt-3 mb-4 ">
@@ -266,9 +271,12 @@ align-items:center;
             <li style="padding-left: 32px;">Cash out your earnings whenever you want.</li>
           </ul>
       
-
-          <button type="button" class="btn btn-primary rounded-5 btnColor mx-2">Apply to drive</button>
-          <a href="#" class="btn btn-light btn-outline-primary rounded-5 ">How driver pay works <i class="fa fa-chevron-right"></i></a>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary rounded-5 btnColor mx-2 my-2 px-5  my-3">Apply to drive</button>
+            <a href="#" class="btn btn-light btn-outline-primary rounded-5 ">How driver pay works <i class="fa fa-chevron-right"></i></a>
+          </div>
+          
+        
         </div>
         <div class="col-lg-6 col-md-12 d-none d-lg-block">
           <img width="60%" src="./images/home_pinkpaint_driver.jpg" class="img-fluid" alt="">
@@ -276,11 +284,11 @@ align-items:center;
 
 
 
-        <div class="row d-flex justify-content-center g-4">
+        <div class="row d-flex justify-content-center g-4 mx-auto">
           <div class="col-lg-4">
               <div class="d-flex justify-content-center pt-2 pb-5">
               <img class="tm-people zoom" src="./images/harold_driver.png" alt=""></div>
-              <div class="color-grey-3 text-center pb-5">“As a student, it’s hard to complete my class work around a schedule. I started driving more with Lyft and realized it was the perfect opportunity to make money and work on my own time! Driving with Lyft gives me freedom in my schedule to focus on school, which is my main priority.”</div>
+              <div class="color-grey-3 text-center pb-5">“I started driving more with Lyft and realized it was the perfect opportunity to make money and work on my own time! Driving with Lyft gives me freedom in my schedule to focus on school, which is my main priority.”</div>
               <div class="link-name d-flex justify-content-center">- Harold</div>
               <div class="link-position d-flex justify-content-center fst-italic">Driving with Lyft since 2020</div>
           </div>
@@ -323,18 +331,18 @@ in just a few quick taps -->
   
             <ul class="list-unstyled mt-3   ">
               <li> <i class="bi bi-clock mx-2"></i><b>Get a reliable ride in minutes</b></li>
-              <br>
-              <li> <i class="bi bi-plus-circle mx-2"></i><b>Know that your driver is wearing a mask</b></li>
+    
               <br>
               <li> <i class="bi bi-calendar mx-2"></i><b>Schedule your ride in advance</b></li>
             </ul>
         
   
-            <button type="button" class="btn btn-primary btn-rounded rounded-5 btnColor m-1">Get a ride</button>
-            <a href="#" class="btn btn-light rounded-5 btn-outline-primary m-1">Learn more about riding with Lyft <i class="fa fa-chevron-right"></i> </a>
+           
+            <button type="button" class="btn btn-primary btn-rounded rounded-5 btnColor m-1 px-3">Get a ride</button>
+            <a href="#" class="btn btn-light rounded-5 btn-outline-primary m-1">Learn more</i> </a>
           </div>
-          <div class="col-lg-6 ">
-            <img width="75%" src="./images/rider_stylized_text_image.png" class="img-fluid" alt="" />
+          <div class="col-lg-6">
+            <img width="75%" src="./images/rider_stylized_text_image.png" class="img-fluid mx-auto" alt="" />
           </div>
         </div>
       </div>
@@ -380,8 +388,10 @@ in just a few quick taps -->
        
           </ul>
         
-  
-            <button type="button" class="btn btn-primary rounded-5 btnColor">Get your first month free</button>
+            <div class="text-center">
+              <button type="button" class="btn btn-primary rounded-5 btnColor ">Get your first month free</button>
+
+            </div>
             <br>
             <div class="pt-3 small">
               <p>Subject to the <a class="link-dark" href="" class="">Lyft Pink Terms & Conditions</a> and <a href="" class="link-dark">Lyft Terms of Service</a></p>
@@ -391,16 +401,13 @@ in just a few quick taps -->
       </div>
     </section>
 <!-- card carousal -->
-<div class="container text-center my-3">
+<div class="d-none d-xl-block">
+<div class="container text-center my-3 ">
   <div class="row">
-    <div class="col-md-8 mb-3">
+    <div class="col-12">
       <h2>Ride. Bike. Scoot. Go bananas.</h2>
-      <span>We’ve got options to get you where 
-        you’re going. Choose a ride* that suits 
-        your mood and budget.
-      </span>
+     
     </div>
-    <div class="col-md-4">
 
     </div>
   </div>
@@ -409,8 +416,8 @@ in just a few quick taps -->
       <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <div class="col-md-6 col-sm-6 col-lg-3 mx-1">
-                  <div class="card ">
+              <div class="col-lg-3 col-md-4 col-12">
+                  <div class="card text-center">
                     <div class="card-header h5">Lyft</div>
                       <div class="card-img py-5">
                           <img style="width: auto; height: 100px;" src="./images/1.svg" class="img-fluid   pb-4 py-0 mx-auto zoom">
@@ -425,8 +432,8 @@ in just a few quick taps -->
               </div>
           </div>
           <div class="carousel-item">
-            <div class="col-md-6 col-sm-6 col-lg-3 mx-1">
-                <div class="card ">
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="card  text-center">
                   <div class="card-header h5">Scooters</div>
                     <div class="card-img py-5">
                         <img style="width: auto; height: 100px;" src="./images/22.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
@@ -439,8 +446,8 @@ in just a few quick taps -->
             </div>
         </div>
         <div class="carousel-item">
-          <div class="col-md-6 col-sm-6 col-lg-3 mx-1">
-              <div class="card ">
+          <div class="col-lg-3 col-md-4 col-12">
+              <div class="card  text-center">
                 <div class="card-header h5 ">Priority Pickup</div>
                   <div class="card-img py-5">
                       <img style="width: auto; height: 100px;" src="./images/33.svg" class="img-fluid   pb-4 py-0 mx-auto zoom">
@@ -453,8 +460,8 @@ in just a few quick taps -->
           </div>
       </div>
       <div class="carousel-item">
-        <div class="col-md-6 col-sm-6 col-lg-3 mx-1">
-            <div class="card ">
+        <div class="col-lg-3 col-md-4 col-12">
+            <div class="card  text-center">
               <div class="card-header h5">Preferred</div>
                 <div class="card-img py-5">
                     <img style="width: auto; height: 100px;" src="./images/44.svg" class="img-fluid   pb-4 py-0 mx-auto zoom">
@@ -467,8 +474,8 @@ in just a few quick taps -->
         </div>
     </div>
     <div class="carousel-item">
-      <div class="col-md-6 col-sm-6 col-lg-3 mx-1">
-          <div class="card ">
+      <div class="col-lg-3 col-md-4 col-12">
+          <div class="card  text-center">
             <div class="card-header h5">Rentals</div>
               <div class="card-img py-5">
                   <img style="width: auto; height: 100px;" src="./images/55.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
@@ -481,8 +488,8 @@ in just a few quick taps -->
       </div>
   </div>
   <div class="carousel-item">
-    <div class="col-md-6 col-sm-6 col-lg-3 mx-1">
-        <div class="card ">
+    <div class="col-lg-3 col-md-4 col-12">
+        <div class="card  text-center">
           <div class="card-header h5">Lyft XL</div>
             <div class="card-img py-5">
                 <img style="width: auto; height: 100px;" src="./images/66.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
@@ -495,8 +502,8 @@ in just a few quick taps -->
     </div>
 </div>
 <div class="carousel-item">
-  <div class="col-md-6 col-sm-6 col-lg-3 mx-1">
-      <div class="card ">
+  <div class="col-lg-3 col-md-4 col-12">
+      <div class="card  text-center">
         <div class="card-header h5">Lyft Lux</div>
           <div class="card-img py-5">
               <img style="width: auto; height: 100px;" src="./images/77.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
@@ -509,8 +516,8 @@ in just a few quick taps -->
   </div>
 </div>
 <div class="carousel-item">
-  <div class="col-md-6 col-sm-6 col-lg-3 mx-1">
-      <div class="card ">
+  <div class="col-lg-3 col-md-4 col-12">
+      <div class="card  text-center">
         <div class="card-header h5">Transit</div>
           <div class="card-img py-5">
               <img style="width: auto; height: 100px;" src="./images/88.png" class="img-fluid   pb-4 py-0 mx-auto zoom">
@@ -526,18 +533,18 @@ in just a few quick taps -->
     
           </div>
           <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="carousel-control-prev-icon" ></span>
           </a>
           <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="carousel-control-next-icon"  ></span>
           </a>
       </div>
   </div>
-  <h6 class="mt-2 fw-light align-content-start">
+  <h6 class="mt-2 fw-light align-content-start mx-2">
     *Availability of bikes, scooters, rentals, ride types, and transit information varies by region.
   </h6>
 </div>
-
+</div>
     <!-- Get an estimate
      -->
 
@@ -548,16 +555,16 @@ in just a few quick taps -->
             <p class="h3 px-5 pt-5 ">Ready to roll?</p>
             <p class="h3 px-5 pb-5">Get an estimate.</p>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 p-sm-3 p-1">
+          <div class="col-lg-3 col-md-3 col-sm-12 p-sm-3 px-4 py-1">
             <input class="form-control"
              type="text" placeholder="Enter pick-up location">
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 p-sm-3 p-1">
+          <div class="col-lg-3 col-md-3 col-sm-12 p-sm-3 px-4 py-1">
             <input class="form-control"
              type="text" placeholder="Enter drop-off location">
           </div>
 
-          <div class="col-lg-3 col-md-3 col-sm-12 p-2">
+          <div class="col-lg-3 col-md-3 col-sm-12 px-4 py-2">
             <button type="button" class="btn btn-light  rounded-5 mx-sm-2">Get estimate</button>
           </div>
 
@@ -570,19 +577,18 @@ in just a few quick taps -->
       <div class="container">
         <div class="row align-items-center justify-content-between">
           <div class="col-lg-6 col-md-12 col-sm-12 ">
-            <img width="60%" src="./images/home_pinkpaint_safety.jpg" class="img-fluid" alt="" />
+            <img width="100%" src="./images/home_pinkpaint_safety.jpg" class="img-fluid" alt="" />
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12">
-            <p class="h6"><b>SAFETY FIRST</b></p>
+            <p class="h6 my-2"><b>SAFETY FIRST</b></p>
             <p class="h2"><b>Your safety comes first. Always.</b></p>
             <p class="fw-light"><b>We look out for you before, during, 
               and after every single ride. And we monitor rides
                to help you get where you need to go. If you ever
                 need it, we’re standing by, ready to help.</b></p>
 
-            <button type="button" class="btn btn-primary rounded-5 btnColor">Learn about safety</button>
-            <a href="#" class="btn btn-light rounded-5 ">Community guidelines <i class="fa fa-chevron-right"></i></a>    
-    
+            <button type="button" class="btn btn-primary rounded-5 btnColor px-3">Learn about safety</button>
+            
           </div>
         </div>
       </div>
@@ -607,7 +613,7 @@ in just a few quick taps -->
 
         </b></p>
 
-         <a href="#" class="btn btn-light rounded-5">Learn about our Lyft Up programs <i class="fa fa-chevron-right"></i></a>    
+        <button style="color:black" type="button" class="btn btn-light border p-2 mb-2 bg-white rounded-5 btnColor">Learn more</button>
 
       </div>
     </div>
@@ -744,19 +750,15 @@ in just a few quick taps -->
       </div>
     </div>
 
-    <div class="col-12  d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+    <div class="col-12  d-flex flex-column flex-md-row justify-content-between  my-4 border-top">
       <p>© 2022 Company, Inc. All rights reserved.</p>
 
       <div class="footerlinks ">
         
-        <ul class="list-unstyled d-flex">
-              <li><a class="link-secondary m-2 " href="">Terms</a></li>
+        <ul class="list-unstyled d-inline-flex">
               <li><a class="link-secondary m-2 " href="">Terms</a></li>
               <li><a class="link-secondary m-2 " href="">Privacy</a></li>
-              <li><a class="link-secondary m-2 " href="">Accessibility Statemnt</a></li>
-              <li><a class="link-secondary m-2 " href="">Your Privary Choices<img src=""/></a></li>
               <li><a class="link-secondary m-2"  href="">2023 Lyft, Inc.</a></li>
-              <li><a class="link-secondary m-2" href="">CPUC ID No. TCP0032513-P</a></li>
 
         </ul>
 
